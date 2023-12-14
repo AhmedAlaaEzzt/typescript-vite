@@ -1,0 +1,7 @@
+{
+  "habit": [
+    { "id": 1, "name": "Walking", "color": "#4287f5" },
+    { "id": 2, "name": "Revise English phrases", "color": "#f55a42" },
+    { "id": 3, "name": "Revise TypeScript Questions", "color": "#42f584" }
+  ]
+}
