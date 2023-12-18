@@ -1,7 +1,8 @@
-let result;
+function greet(name: string, greeting: string) {
+  return `${greeting}, ${name}!`;
+}
 
-const toInteger = (input): number => {
-  return Math.floor(input);
-};
-
-result = toInteger(123.456); // Outputs: 123
+console.log(greet("Ali", "Hello")); // Output: "Hello, Ali!"
+console.log(greet()); // Output: "Welcome, Guest!"
+console.log(greet("Ali")); // Output: "Welcome, Ali!"
+console.log(greet(undefined, "Hi")); // Output: "Hi, Guest!"
