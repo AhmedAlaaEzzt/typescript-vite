@@ -1,8 +1,9 @@
-function greet(name: string, greeting: string) {
-  return `${greeting}, ${name}!`;
+function logMessage(message: string, timestamp: Date, details: string) {
+  let log = `${message} at ${timestamp.toLocaleTimeString()} - ${details}`;
+
+  console.log(log);
 }
 
-console.log(greet("Ali", "Hello")); // Output: "Hello, Ali!"
-console.log(greet()); // Output: "Welcome, Guest!"
-console.log(greet("Ali")); // Output: "Welcome, Ali!"
-console.log(greet(undefined, "Hi")); // Output: "Hi, Guest!"
+logMessage("Payment processed", new Date(), "Success"); // Output: "Payment processed at <current time> - Success"
+logMessage("User logged out", new Date()); // Output: "User logged out at <current time>"
+logMessage("User logged in"); // Output: "User logged in"
