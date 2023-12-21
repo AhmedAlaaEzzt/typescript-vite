@@ -1,9 +1,9 @@
-function logMessage(message: string, timestamp: Date, details: string) {
-  let log = `${message} at ${timestamp.toLocaleTimeString()} - ${details}`;
+// Fetching elements from the DOM
+const userNameElement = document.getElementById("userName");
+const userAgeElement = document.getElementById("userAge");
 
-  console.log(log);
-}
+const userName = userNameElement.textContent;
+console.log(`User Name: ${userName}`);
 
-logMessage("Payment processed", new Date(), "Success"); // Output: "Payment processed at <current time> - Success"
-logMessage("User logged out", new Date()); // Output: "User logged out at <current time>"
-logMessage("User logged in"); // Output: "User logged in"
+const userAge = userAgeElement.textContent;
+console.log(`User Age: ${userAge}`);
