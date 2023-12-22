@@ -1,11 +1,14 @@
-// Processor 1: Convert to uppercase
-const toUpperCaseProcessor = (input: string) => input.toUpperCase();
+const users = [
+  { id: 1, Name: "Alice", age: 30, isActive: true },
+  { id: 2, name: "Bob", age: 22, isActive: false },
+  { id: 3, name: "Carol", age: 33, isActive: "yes" },
+];
 
-// Processor 2: Reverse the string
-const reverseStringProcessor = (input: string) =>
-  input.split("").reverse().join("");
+// Function to filter active users
+const activeUsers = users.filter((user) => user.isActive);
 
-const stringInput = "Hello, World!";
+// Function to get user names
+const userNames = users.map((user) => user.name);
 
-console.log(toUpperCaseProcessor(stringInput)); // Output: "HELLO, WORLD!"
-console.log(reverseStringProcessor(stringInput)); // Output: "!dlroW ,olleH"
+console.log("Active Users:", activeUsers);
+console.log("User Names:", userNames);
