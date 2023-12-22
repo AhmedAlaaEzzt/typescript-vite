@@ -1,14 +1,21 @@
-const users = [
-  { id: 1, Name: "Alice", age: 30, isActive: true },
+interface User {
+  id: number;
+  name: string;
+  age: number;
+  isActive: boolean;
+}
+
+const users: User[] = [
+  { id: 1, name: "Alice", age: 30, isActive: true, email: "alice@example.com" },
   { id: 2, name: "Bob", age: 22, isActive: false },
-  { id: 3, name: "Carol", age: 33, isActive: "yes" },
+  { id: 3, name: "Carol", age: 33, isActive: true, email: "carol@example.com" },
 ];
 
-// Function to filter active users
-const activeUsers = users.filter((user) => user.isActive);
+// Function to filter users with an email
+const usersWithEmail = users.filter((user) => user.email !== undefined);
 
-// Function to get user names
-const userNames = users.map((user) => user.name);
+// Function to extract email addresses
+const userEmails = usersWithEmail.map((user) => user.email);
 
-console.log("Active Users:", activeUsers);
-console.log("User Names:", userNames);
+console.log("Users with Email:", usersWithEmail);
+console.log("User Emails:", userEmails);
