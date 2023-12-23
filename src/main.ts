@@ -3,5 +3,6 @@ class BankAccount {
 }
 
 const myAccount = new BankAccount();
+myAccount.transactionCount = 100;
 
 console.log(myAccount);
