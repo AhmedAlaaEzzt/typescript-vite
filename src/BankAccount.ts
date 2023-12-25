@@ -1,4 +1,6 @@
-export class BankAccount {
+import { IBankAccount } from "./interfaces/IBankAccount";
+
+export class BankAccount implements IBankAccount {
   private accountHolder: string;
   private accountNumber: string;
   private balance: number;
