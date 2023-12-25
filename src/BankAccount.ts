@@ -34,12 +34,13 @@ export class BankAccount implements IBankAccount {
     console.log(`Withdrew: $${amount}. New Balance: $${this.balance}`);
   }
 
-  displayAccountInfo() {
+  displayAccountInfo(endingLineVisible: boolean = true) {
     console.log(`============= Starting of info =============`);
     console.log(`Account Holder: ${this.accountHolder}`);
     console.log(`Account Number: ${this.accountNumber}`);
     console.log(`Balance: $${this.balance}`);
     console.log(`Total Transactions: ${this.transactionCount}`);
-    console.log(`============= Ending of info =============`);
+    if (endingLineVisible)
+      console.log(`============= Ending of info =============`);
   }
 }
