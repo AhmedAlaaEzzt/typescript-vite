@@ -6,6 +6,8 @@ export class BankAccount implements IBankAccount {
   protected balance: number;
   private _transactionCount;
 
+  private static totalAccounts = 0;
+
   constructor(
     accountHolder: string,
     accountNumber: string,
@@ -16,6 +18,7 @@ export class BankAccount implements IBankAccount {
     this.accountNumber = accountNumber;
     this.balance = balance;
     this._transactionCount = transactionCount;
+    BankAccount.totalAccounts++;
   }
 
   public get transactionCount() {
@@ -42,5 +45,9 @@ export class BankAccount implements IBankAccount {
     console.log(`Total Transactions: ${this.transactionCount}`);
     if (endingLineVisible)
       console.log(`============= Ending of info =============`);
+  }
+
+  public static getTotalAccounts() {
+    return BankAccount.totalAccounts;
   }
 }
