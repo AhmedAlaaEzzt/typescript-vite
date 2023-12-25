@@ -14,3 +14,5 @@ const savingsAccount = new SavingsAccount(
 );
 
 savingsAccount.displayAccountInfo();
+
+savingsAccount.applyInterest();

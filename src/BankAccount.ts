@@ -3,7 +3,7 @@ import { IBankAccount } from "./interfaces/IBankAccount";
 export class BankAccount implements IBankAccount {
   private accountHolder: string;
   private accountNumber: string;
-  private balance: number;
+  protected balance: number;
   private _transactionCount;
 
   constructor(

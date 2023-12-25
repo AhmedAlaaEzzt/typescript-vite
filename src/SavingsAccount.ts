@@ -18,4 +18,12 @@ export class SavingsAccount extends BankAccount implements ISavingsAccount {
     console.log(`Interest Rate: ${this.interestRate}%`);
     console.log(`============= Ending of info =============`);
   }
+
+  applyInterest() {
+    const interest = this.balance * (this.interestRate / 100);
+    this.deposit(interest);
+    console.log(
+      `Interest of $${interest} applied. New Balance: $${this.balance}`
+    );
+  }
 }
