@@ -6,6 +6,6 @@ myAccount.displayAccountInfo();
 myAccount.deposit(500);
 myAccount.displayAccountInfo();
 
-class SavingsAccount {}
+class SavingsAccount extends BankAccount {}
 
-const savingsAccount = new SavingsAccount();
+const savingsAccount = new SavingsAccount("User Name 02", "00002", 100, 1);
