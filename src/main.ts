@@ -1,7 +1,7 @@
 import { BankAccount } from "./BankAccount";
 import { ISavingsAccount } from "./interfaces/ISavingsAccount";
 
-const myAccount = new BankAccount("User Name", "00001", 1000, 1);
+const myAccount = new BankAccount("BankAccount User", "00001", 1000, 1);
 
 myAccount.displayAccountInfo();
 
@@ -19,4 +19,12 @@ class SavingsAccount extends BankAccount implements ISavingsAccount {
   }
 }
 
-const savingsAccount = new SavingsAccount("User Name 02", "00002", 100, 1, 0.1);
+const savingsAccount = new SavingsAccount(
+  "SavingsAccount User",
+  "00002",
+  100,
+  1,
+  0.1
+);
+
+savingsAccount.displayAccountInfo();
