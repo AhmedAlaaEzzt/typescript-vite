@@ -1,7 +1,18 @@
 class BankAccount {
+  private accountHolder: string;
+  private accountNumber: string;
+  private balance: number;
   private _transactionCount;
 
-  constructor(transactionCount: number) {
+  constructor(
+    accountHolder: string,
+    accountNumber: string,
+    balance: number,
+    transactionCount: number
+  ) {
+    this.accountHolder = accountHolder;
+    this.accountNumber = accountNumber;
+    this.balance = balance;
     this._transactionCount = transactionCount;
   }
 
@@ -10,6 +21,6 @@ class BankAccount {
   }
 }
 
-const myAccount = new BankAccount(5);
+const myAccount = new BankAccount("User Name", "00001", 1000, 1);
 
 console.log(myAccount);
