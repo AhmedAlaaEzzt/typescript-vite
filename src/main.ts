@@ -17,6 +17,11 @@ class SavingsAccount extends BankAccount implements ISavingsAccount {
     super(accountHolder, accountNumber, balance, transactionCount);
     this.interestRate = interestRate;
   }
+  displayAccountInfo() {
+    super.displayAccountInfo(false);
+    console.log(`Interest Rate: ${this.interestRate}%`);
+    console.log(`============= Ending of info =============`);
+  }
 }
 
 const savingsAccount = new SavingsAccount(
