@@ -1,8 +1,9 @@
 import { BankAccount } from "./BankAccount";
+import { ISavingsAccount } from "./interfaces/ISavingsAccount";
 
 const myAccount = new BankAccount("User Name", "00001", 1000, 1);
 
-class SavingsAccount extends BankAccount {
+class SavingsAccount extends BankAccount implements ISavingsAccount {
   private interestRate: number; // Annual interest rate
   constructor(
     accountHolder: string,
