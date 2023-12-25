@@ -5,3 +5,7 @@ const myAccount = new BankAccount("User Name", "00001", 1000, 1);
 myAccount.displayAccountInfo();
 myAccount.deposit(500);
 myAccount.displayAccountInfo();
+
+class SavingsAccount {}
+
+const savingsAccount = new SavingsAccount();
